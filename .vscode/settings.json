@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f674db31-8b9f-40fa-9334-8ddf7d3d114f/resourceGroups/walterweb/providers/Microsoft.Web/sites/walterweb",
+    "appService.deploySubpath": ""
+}

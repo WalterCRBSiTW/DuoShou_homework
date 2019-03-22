@@ -1,0 +1,1220 @@
+@import "normalize";
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(2, 2, 2);
+    transform: scale3d(2, 2, 2);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+%nostyle-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.4;
+  color: #555;
+}
+
+a {
+  color: #009ced;
+  text-decoration: none;
+
+  &:hover {
+    color: #0081c3;
+    text-decoration: underline;
+  }
+  /* :hover 當滑鼠停留在目標物時，會觸發hover */
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*----------------------------------剁手首頁-------------------------------------------*/
+//頁首
+.home-header {
+  background: rgb(7, 7, 7);
+  height: 30px;
+
+  p {
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    margin: 0;
+  }
+}
+// 選單目錄
+.home-main .container {
+  height: 45px;
+  border-top: #ddd 1px solid; /*設定頂部的 樣式*/
+  border-bottom: #ddd 1px solid; /*設定底部的 樣式*/
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between; 
+
+  .main-menu { 
+    ul {
+      @extend %nostyle-list;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;    
+    }
+
+    a {
+      display: block; /*強迫 a區塊 呈現兩行*/
+      width: 70px;
+      height: 45px;
+      font-size: 13px;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+      text-align: center; /*讓文字對齊*/
+      text-decoration: none;
+    }
+
+    a:hover {
+      /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+      background: #16313d;
+      color: #fff; /* 這裡我們要讓選單可以觸發深橘色*/
+      transition-property: background;
+      transition-duration: 1s;
+      background: lighten(#16313d, 10);
+    }
+  }
+
+  .main-title {
+    justify-content: center;
+    p {
+      margin: 0 auto;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+    }
+      
+    
+  }
+
+  .main-link {
+    ul {
+      @extend %nostyle-list;
+      margin: 0 auto;
+      width: 210px;
+      display: flex;
+      justify-content: flex-end;
+
+      li:nth-child(4) {
+        a {
+          width: 50px;
+          height: 45px;
+          position: relative;
+          left: 50%;
+        }
+      }
+    }
+
+    a {
+      display: block; /*強迫 a區塊 呈現兩行*/
+      width: 30px;
+      height: 45px;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+      text-decoration: none;
+      i {
+        position: relative;
+        left: 7.5px;
+      }
+
+      &:hover {
+        animation-name: pulse;
+        animation-duration: 2s;
+      }
+    }
+  }
+}
+// 封面
+.home-image {
+  height: 400px;
+  // background: url(../__MACOSX/image.jpg) center no-repeat;
+  background: url(/__MACOSX/image.jpg) center no-repeat;
+  background-size: cover; 
+  position: relative;
+
+  h2 {
+    font-size: 65px;
+    color: rgb(247, 247, 247);
+    position: absolute;
+    margin: 0;
+    right: 50%;
+    bottom: 80px;
+    text-shadow: #2e3133 0 0 10px;
+  }
+}
+//商品目錄
+.home-menu {
+  img {
+    max-width: 100%;
+  }
+  h2 {
+    font-size: 60px;
+    line-height: 90px;
+    display: flex;
+    justify-content: center;
+  }
+
+  ul {
+    @extend %nostyle-list;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+      margin: 0 auto;
+    }
+  }
+
+  a {
+    @extend %nostyle-list;
+    display: block;
+    margin: 40px auto 0;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  p {
+    text-align: center;
+    margin: 5px;
+  }
+}
+//產品說明
+.home-directions {
+  background: rgb(134, 133, 133);
+  padding: 40px 0;
+
+  h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center; /*字中對齊*/
+    margin: 0 0 30px; /*間距30*/
+  }
+
+  p {
+    color: #fff;
+    margin: 0 200px;
+    text-align: center;
+  }
+}
+//訂閱
+.home-subscription {
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  background: rgb(240, 240, 240);
+  h2 {
+    color: #000000;
+    font-size: 2rem;
+    text-align: center;
+    width: 400px;
+    margin: 0 400px 30px;
+  }
+
+  .email {
+    margin: 10px auto 0;
+    width: 539px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    input:nth-of-type(1) {
+      margin: 0 auto;
+      height: 28px;
+      width: 500px;
+      border: #ddd 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
+      border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+      padding-left: 35px; /*這裡將 search的內距向右調整*/
+      
+    }
+    input:nth-of-type(2) {
+      margin: 10px auto 0;
+      padding: 0;
+      height: 28px;
+      width: 539px;
+      color: #fff;
+      background: #000000;
+      border: rgb(0, 0, 0) 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
+      border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+    }
+
+    i {
+      position: absolute;
+      top: 9px;
+      left: 10px;
+
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #099ced;
+      box-shadow: #009ced 0 0 2px;
+    }
+  }
+}
+//頁腳
+.home-footer {
+  background: #000000;
+  margin: 40px auto 0;
+  ul {
+    @extend %nostyle-list;
+    width: 300px;
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    display: block; /*強迫 a區塊 呈現兩行*/
+    width: 70px;
+    height: 45px;
+    font-size: 13px;
+    line-height: 45px; /*設定框線的 行高*/
+    color: rgb(255, 255, 255);
+    text-align: center; /*讓文字對齊*/
+    text-decoration: none;
+  }
+
+  a:hover {
+    /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+    color: rgb(255, 255, 255); /* 這裡我們要讓選單可以觸發深橘色*/
+    transition-property: background;
+    animation-name: pulse;
+    animation-duration: 2s;
+  }
+}
+.home-end {
+  background: rgb(184, 184, 184);
+
+  p {
+    @extend %nostyle-list;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+  }
+}
+
+/*----------------------------------商品確認-------------------------------------------*/
+.home-header {
+  background: rgb(7, 7, 7);
+  height: 30px;
+
+  p {
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    margin: 0;
+  }
+}
+// 選單目錄
+.home-main .container {
+  height: 45px;
+  border-top: #ddd 1px solid; /*設定頂部的 樣式*/
+  border-bottom: #ddd 1px solid; /*設定底部的 樣式*/
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between; 
+
+  .main-menu { 
+    ul {
+      @extend %nostyle-list;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;    
+    }
+
+    a {
+      display: block; /*強迫 a區塊 呈現兩行*/
+      width: 70px;
+      height: 45px;
+      font-size: 13px;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+      text-align: center; /*讓文字對齊*/
+      text-decoration: none;
+    }
+
+    a:hover {
+      /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+      background: #16313d;
+      color: #fff; /* 這裡我們要讓選單可以觸發深橘色*/
+      transition-property: background;
+      transition-duration: 1s;
+      background: lighten(#16313d, 10);
+    }
+  }
+
+  .main-title {
+    justify-content: center;
+    p {
+      margin: 0 auto;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+    }
+      
+    
+  }
+
+  .main-link {
+    ul {
+      @extend %nostyle-list;
+      margin: 0 auto;
+      width: 210px;
+      display: flex;
+      justify-content: flex-end;
+
+      li:nth-child(4) {
+        a {
+          width: 50px;
+          height: 45px;
+          position: relative;
+          left: 50%;
+        }
+      }
+    }
+
+    a {
+      display: block; /*強迫 a區塊 呈現兩行*/
+      width: 30px;
+      height: 45px;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+      text-decoration: none;
+      i {
+        position: relative;
+        left: 7.5px;
+      }
+
+      &:hover {
+        animation-name: pulse;
+        animation-duration: 2s;
+      }
+    }
+  }
+}
+
+.product-path .container {
+  justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+
+
+  ul {
+    @extend %nostyle-list;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto 40px;
+  }
+
+  a {
+    display: block; /*強迫 a區塊 呈現兩行*/
+    width: 40px;
+    height: 45px;
+    font-size: 13px;
+    line-height: 45px; /*設定框線的 行高*/
+    color: rgb(17, 15, 15);
+    text-align: center; /*讓文字對齊*/
+    text-decoration: none;
+  }
+
+  a:hover {
+    /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+    color: rgb(206, 151, 0); /* 這裡我們要讓選單可以觸發深橘色*/
+  }
+
+  p {
+    margin: 12px 0 0 0;
+  }
+}
+}
+
+
+.product-introduction {
+  width: 950px;
+  height: 1000px;
+  margin: 0 160px 60px 160px;
+  display: flex;
+  flex-direction: row;
+
+  .product-image {
+    margin: 0 30px 0 0;
+    width: 500px;
+    height: 600px;
+
+    img {
+      width: 500px;
+      height: 600px;
+    }
+  }
+
+  .main-message {
+    margin: 0;
+    width: 500px;
+    height: 600px;
+
+    ul {
+      @extend %nostyle-list;
+      flex-direction: column;
+
+      li:nth-child(2) {
+        margin: 0 0 30px 0;
+      }
+
+      li:nth-child(3) {
+        margin: 0 0 30px 0;
+        font-size: 20px;
+        color: #000;
+      }
+
+      li:nth-child(4) {
+        margin: 0 0 10px 0;
+      }
+    }
+    h2 {
+      margin: 0;
+      color: #000;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .button {
+    flex-direction: column;
+    padding: 0 0 60px 0;
+    border-bottom: #555 3px solid;
+
+    select {
+      display: block;
+      width: 420px;
+      height: 50px;
+      margin: 0 0 50px 0;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+    }
+
+    input {
+      display: block;
+    }
+    input:nth-of-type(1) {
+      width: 90px;
+      height: 50px;
+      margin: 0 0 30px 0;
+    }
+
+    input:nth-of-type(2) {
+      width: 420px;
+      height: 50px;
+      background: #000;
+      color: #fff;
+      border: #000 1px solid;
+    }
+  }
+
+  .new-items {
+    h3 {
+      margin: 50px 0;
+    }
+
+    li {
+      margin: 0 0 30px 0;
+      display: flex;
+      flex-direction: row;
+
+      div {
+        margin: 0 0 0 20px;
+
+        p {
+          font-size: 16px;
+          color: #000;
+        }
+
+        h4 {
+          font-size: 16px;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.page-navigation {
+  ul {
+    @extend %nostyle-list;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0 400px;
+  }
+}
+
+.home-subscription {
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  background: rgb(240, 240, 240);
+  h2 {
+    color: #000000;
+    font-size: 2rem;
+    text-align: center;
+    width: 400px;
+    margin: 0 400px 30px;
+  }
+
+  .email {
+    margin: 10px auto 0;
+    width: 539px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    input:nth-of-type(1) {
+      margin: 0 auto;
+      height: 28px;
+      width: 500px;
+      border: #ddd 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
+      border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+      padding-left: 35px; /*這裡將 search的內距向右調整*/
+      
+    }
+    input:nth-of-type(2) {
+      margin: 10px auto 0;
+      padding: 0;
+      height: 28px;
+      width: 539px;
+      color: #fff;
+      background: #000000;
+      border: rgb(0, 0, 0) 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
+      border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+    }
+
+    i {
+      position: absolute;
+      top: 9px;
+      left: 10px;
+
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #099ced;
+      box-shadow: #009ced 0 0 2px;
+    }
+  }
+}
+//頁腳
+.home-footer {
+  background: #000000;
+  margin: 40px auto 0;
+  ul {
+    @extend %nostyle-list;
+    width: 300px;
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    display: block; /*強迫 a區塊 呈現兩行*/
+    width: 70px;
+    height: 45px;
+    font-size: 13px;
+    line-height: 45px; /*設定框線的 行高*/
+    color: rgb(255, 255, 255);
+    text-align: center; /*讓文字對齊*/
+    text-decoration: none;
+  }
+
+  a:hover {
+    /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+    color: rgb(255, 255, 255); /* 這裡我們要讓選單可以觸發深橘色*/
+    transition-property: background;
+    animation-name: pulse;
+    animation-duration: 2s;
+  }
+}
+.home-end {
+  background: rgb(184, 184, 184);
+
+  p {
+    @extend %nostyle-list;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+  }
+}
+
+/*-----------------------------------購物車---------------------------------------*/
+
+.home-header {
+  background: rgb(7, 7, 7);
+  height: 30px;
+
+  p {
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    margin: 0;
+  }
+}
+// 選單目錄
+.home-main .container {
+  height: 45px;
+  border-top: #ddd 1px solid; /*設定頂部的 樣式*/
+  border-bottom: #ddd 1px solid; /*設定底部的 樣式*/
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between; 
+
+  .main-menu { 
+    ul {
+      @extend %nostyle-list;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;    
+    }
+
+    a {
+      display: block; /*強迫 a區塊 呈現兩行*/
+      width: 70px;
+      height: 45px;
+      font-size: 13px;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+      text-align: center; /*讓文字對齊*/
+      text-decoration: none;
+    }
+
+    a:hover {
+      /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+      background: #16313d;
+      color: #fff; /* 這裡我們要讓選單可以觸發深橘色*/
+      transition-property: background;
+      transition-duration: 1s;
+      background: lighten(#16313d, 10);
+    }
+  }
+
+  .main-title {
+    justify-content: center;
+    p {
+      margin: 0 auto;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+    }
+      
+    
+  }
+
+  .main-link {
+    ul {
+      @extend %nostyle-list;
+      margin: 0 auto;
+      width: 210px;
+      display: flex;
+      justify-content: flex-end;
+
+      li:nth-child(4) {
+        a {
+          width: 50px;
+          height: 45px;
+          position: relative;
+          left: 50%;
+        }
+      }
+    }
+
+    a {
+      display: block; /*強迫 a區塊 呈現兩行*/
+      width: 30px;
+      height: 45px;
+      line-height: 45px; /*設定框線的 行高*/
+      color: rgb(17, 15, 15);
+      text-decoration: none;
+      i {
+        position: relative;
+        left: 7.5px;
+      }
+
+      &:hover {
+        animation-name: pulse;
+        animation-duration: 2s;
+      }
+    }
+  }
+}
+
+.product-path {
+  justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+
+  ul {
+    @extend %nostyle-list;
+    height: 45px;
+    display: flex;
+    margin: 0 0 40px 40px;
+  }
+
+  a {
+    display: block; /*強迫 a區塊 呈現兩行*/
+    width: 80px;
+    height: 45px;
+    font-size: 13px;
+    line-height: 45px; /*設定框線的 行高*/
+    color: rgb(17, 15, 15);
+    text-align: center; /*讓文字對齊*/
+    text-decoration: none;
+  }
+
+  a:hover {
+    /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+    color: rgb(206, 151, 0); /* 這裡我們要讓選單可以觸發深橘色*/
+  }
+
+  p {
+    margin: 12px 0 0 0;
+  }
+}
+
+.table {
+  width: 1000px;
+  margin: 0 100px;
+  border-bottom: #000 2px solid;
+
+  .thead-dark {
+    display: flex;
+    width: 1000px;
+    border-bottom: #000 2px solid;
+  }
+}
+
+.list-header {
+  margin: 20px 150px 0 150px;
+  border-bottom: rgb(126, 126, 126) 2px solid;
+
+  ul {
+    @extend %nostyle-list;
+    margin: 0;
+    display: flex;
+    color: #000;
+
+    li {
+      width: 160px;
+      text-align: center;
+
+      &:nth-child(1) {
+        width: 500px;
+        text-align: left;
+      }
+
+      &:nth-last-child(1) {
+        text-align: right;
+      }
+    }
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+
+.list .list-middle {
+  margin: 0 150px;
+  width: 970px;
+  height: 250px;
+  border-bottom: rgb(126, 126, 126) 2px solid;
+  display: flex;
+  flex-direction: row;
+
+  .list-image {
+    margin: 50px 0;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    ul {
+      @extend %nostyle-list;
+      h2 {
+      }
+    }
+
+    img {
+      width: 150px;
+    }
+
+    .image-item {
+      margin: 0 20px;
+
+      li:nth-last-child(1) {
+        margin: 30px 0;
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+  .list-money {
+    width: 470px;
+    ul {
+      @extend %nostyle-list;
+      display: flex;
+      flex-direction: row;
+    }
+    li {
+      margin: 0;
+      width: 200px;
+      justify-content: center;
+      position: relative;
+      left: 7%;
+
+      p {
+        margin: 110px 20px;
+        width: 70px;
+        text-align: right;
+      }
+    }
+    li:nth-last-child(1) {
+      position: relative;
+      left: 13%;
+    }
+    input {
+      margin: 110px 10px;
+      width: 100px;
+    }
+  }
+}
+
+.list-after {
+  margin: 0 150px;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+
+  form {
+    margin: 40px 0;
+    width: 500px;
+  }
+
+  .after-money {
+    width: 470px;
+    height: 150px;
+    margin: 20px 0;
+    border-bottom: rgb(126, 126, 126) 2px solid;
+    display: flex;
+    flex-direction: row;
+
+    ul {
+      margin: 0 0 0 52px;
+      @extend %nostyle-list;
+
+      p {
+        margin: 30px 0;
+      }
+
+      li:nth-of-type(2) {
+        p {
+          text-align: right;
+        }
+      }
+    }
+
+    ul:nth-last-child(1) {
+      width: 60px;
+      position: relative;
+      left: 50%;
+      text-align: right;
+    }
+  }
+
+  input {
+    height: 40px;
+    margin: 0 0 0 10px;
+  }
+}
+.list-last {
+  margin: 0 0 0 420px;
+  width: 500px;
+
+  .last-title ul {
+    @extend %nostyle-list;
+    margin: 0;
+    width: 415px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+  }
+  li {
+    margin: 0 0 0 280px;
+    width: 100px;
+    font-size: 20px;
+    text-align: right;
+    justify-content: space-between;
+  }
+
+  p {
+    width: 70px;
+    text-align: center;
+  }
+
+  form {
+    margin: 0 0 0 230px;
+  }
+  input {
+    background: #000;
+    color: #fff;
+    border: #000 2px solid;
+    border-radius: 30px;
+    width: 470px;
+    height: 50px;
+  }
+}
+.shopping-subscription {
+  margin: 70px 0 0 0;
+  padding: 40px 0 0 0;
+  background: rgb(240, 240, 240);
+  h2 {
+    color: #000000;
+    font-size: 2rem;
+    text-align: center;
+    width: 400px;
+    margin: 0 400px 30px;
+  }
+
+  .email {
+    margin: 0 350px 80px;
+    text-align: center;
+    position: relative;
+    right: 20px;
+    input:nth-of-type(1) {
+      width: 500px;
+      height: 28px;
+      border: #ddd 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
+      border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+      width: 500px;
+      padding-left: 35px; /*這裡將 search的內距向右調整*/
+    }
+    input:nth-of-type(2) {
+      margin: 10px 0 0 0;
+      padding: 0;
+      width: 539px;
+      height: 28px;
+      color: #fff;
+      background: #000000;
+      border: rgb(0, 0, 0) 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
+      border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+    }
+
+    i {
+      position: relative;
+      right: 227px;
+      top: 28.5px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #099ced;
+      box-shadow: #009ced 0 0 2px;
+    }
+  }
+}
+//頁腳
+.shopping-footer {
+  background: #000000;
+  margin: 40px 0 0 0;
+  ul {
+    @extend %nostyle-list;
+    width: 300px;
+    margin: 0 450px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    display: block; /*強迫 a區塊 呈現兩行*/
+    width: 70px;
+    height: 45px;
+    font-size: 13px;
+    line-height: 45px; /*設定框線的 行高*/
+    color: rgb(255, 255, 255);
+    text-align: center; /*讓文字對齊*/
+    text-decoration: none;
+  }
+
+  a:hover {
+    /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+    color: rgb(255, 255, 255); /* 這裡我們要讓選單可以觸發深橘色*/
+    transition-property: background;
+    animation-name: pulse;
+    animation-duration: 2s;
+  }
+}
+.shopping-end {
+  background: rgb(184, 184, 184);
+
+  p {
+    @extend %nostyle-list;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+  }
+}
+
+//這裡開始修正頁面縮放----------------------------------------------------------------------------------------------------------------------------------
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 820px;
+  }
+
+  .home-image h2 {
+    margin: 0;
+    left: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-directions p {
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .home-subscription h2 {
+    margin: 0 auto;
+
+    .email {
+      margin: 0 auto;
+
+      input:nth-of-type(1) {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    width: 550px;
+  }
+
+  .home-image h2 {
+    display: none;
+  }
+
+  .home-main .container {
+    .main-menu a {
+    width: 60px;
+  }
+    .main-link ul {
+      width: 180px;
+      li:nth-child(4) {
+        position: relative;
+        right: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    width: 350px;
+  }
+
+  .home-main .container {
+    .main-menu a {
+      width: 56px;
+    }
+    .main-title {
+    display: none;
+    }
+  
+  }
+
+  .home-subscription {
+    .email {
+      width: 100%;
+
+      input:nth-of-type(1) {
+        width: 100%;
+      }
+      input:nth-of-type(2) {
+        width: 107%;
+      }
+    }
+  }
+
+  
+  
+}
+

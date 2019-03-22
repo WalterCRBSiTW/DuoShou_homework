@@ -1,0 +1,1788 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+@-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(2, 2, 2);
+    transform: scale3d(2, 2, 2);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(2, 2, 2);
+    transform: scale3d(2, 2, 2);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.home-main .container .main-menu ul, .home-main .container .main-link ul, .home-menu ul, .home-menu a, .home-footer ul, .home-end p, .product-path .container ul, .product-introduction .main-message ul, .page-navigation ul, .product-path ul, .list-header ul, .list .list-middle .list-image ul, .list .list-middle .list-money ul, .list-after .after-money ul, .list-last .last-title ul, .shopping-footer ul, .shopping-end p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.4;
+  color: #555;
+}
+
+a {
+  color: #009ced;
+  text-decoration: none;
+  /* :hover 當滑鼠停留在目標物時，會觸發hover */
+}
+
+a:hover {
+  color: #0081c3;
+  text-decoration: underline;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*----------------------------------剁手首頁-------------------------------------------*/
+.home-header {
+  background: #070707;
+  height: 30px;
+}
+
+.home-header p {
+  height: 30px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  margin: 0;
+}
+
+.home-main .container {
+  height: 45px;
+  border-top: #ddd 1px solid;
+  /*設定頂部的 樣式*/
+  border-bottom: #ddd 1px solid;
+  /*設定底部的 樣式*/
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-main .container .main-menu ul {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home-main .container .main-menu a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 70px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+  text-align: center;
+  /*讓文字對齊*/
+  text-decoration: none;
+}
+
+.home-main .container .main-menu a:hover {
+  /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+  background: #16313d;
+  color: #fff;
+  /* 這裡我們要讓選單可以觸發深橘色*/
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background: #244f62;
+}
+
+.home-main .container .main-title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-main .container .main-title p {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+}
+
+.home-main .container .main-link ul {
+  margin: 0 auto;
+  width: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home-main .container .main-link ul li:nth-child(4) a {
+  width: 50px;
+  height: 45px;
+  position: relative;
+  left: 50%;
+}
+
+.home-main .container .main-link a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 30px;
+  height: 45px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+  text-decoration: none;
+}
+
+.home-main .container .main-link a i {
+  position: relative;
+  left: 7.5px;
+}
+
+.home-main .container .main-link a:hover {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.home-image {
+  height: 400px;
+  background: url(/__MACOSX/image.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.home-image h2 {
+  font-size: 65px;
+  color: #f7f7f7;
+  position: absolute;
+  margin: 0;
+  right: 50%;
+  bottom: 80px;
+  text-shadow: #2e3133 0 0 10px;
+}
+
+.home-menu img {
+  max-width: 100%;
+}
+
+.home-menu h2 {
+  font-size: 60px;
+  line-height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home-menu ul li {
+  margin: 0 auto;
+}
+
+.home-menu a {
+  display: block;
+  margin: 40px auto 0;
+  text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-menu p {
+  text-align: center;
+  margin: 5px;
+}
+
+.home-directions {
+  background: #868585;
+  padding: 40px 0;
+}
+
+.home-directions h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  /*字中對齊*/
+  margin: 0 0 30px;
+  /*間距30*/
+}
+
+.home-directions p {
+  color: #fff;
+  margin: 0 200px;
+  text-align: center;
+}
+
+.home-subscription {
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  background: #f0f0f0;
+}
+
+.home-subscription h2 {
+  color: #000000;
+  font-size: 2rem;
+  text-align: center;
+  width: 400px;
+  margin: 0 400px 30px;
+}
+
+.home-subscription .email {
+  margin: 10px auto 0;
+  width: 539px;
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-subscription .email input:nth-of-type(1) {
+  margin: 0 auto;
+  height: 28px;
+  width: 500px;
+  border: #ddd 2px solid;
+  /*這裡將 選取器 邊框的底線改成實線*/
+  border-radius: 17px;
+  /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+  padding-left: 35px;
+  /*這裡將 search的內距向右調整*/
+}
+
+.home-subscription .email input:nth-of-type(2) {
+  margin: 10px auto 0;
+  padding: 0;
+  height: 28px;
+  width: 539px;
+  color: #fff;
+  background: #000000;
+  border: black 2px solid;
+  /*這裡將 選取器 邊框的底線改成實線*/
+  border-radius: 17px;
+  /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+}
+
+.home-subscription .email i {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+
+.home-subscription .email input:focus {
+  outline: none;
+  border-color: #099ced;
+  -webkit-box-shadow: #009ced 0 0 2px;
+          box-shadow: #009ced 0 0 2px;
+}
+
+.home-footer {
+  background: #000000;
+  margin: 40px auto 0;
+}
+
+.home-footer ul {
+  width: 300px;
+  margin: 0 auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home-footer a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 70px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: white;
+  text-align: center;
+  /*讓文字對齊*/
+  text-decoration: none;
+}
+
+.home-footer a:hover {
+  /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+  color: white;
+  /* 這裡我們要讓選單可以觸發深橘色*/
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.home-end {
+  background: #b8b8b8;
+}
+
+.home-end p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+
+/*----------------------------------商品確認-------------------------------------------*/
+.home-header {
+  background: #070707;
+  height: 30px;
+}
+
+.home-header p {
+  height: 30px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  margin: 0;
+}
+
+.home-main .container {
+  height: 45px;
+  border-top: #ddd 1px solid;
+  /*設定頂部的 樣式*/
+  border-bottom: #ddd 1px solid;
+  /*設定底部的 樣式*/
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-main .container .main-menu ul {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home-main .container .main-menu a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 70px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+  text-align: center;
+  /*讓文字對齊*/
+  text-decoration: none;
+}
+
+.home-main .container .main-menu a:hover {
+  /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+  background: #16313d;
+  color: #fff;
+  /* 這裡我們要讓選單可以觸發深橘色*/
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background: #244f62;
+}
+
+.home-main .container .main-title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-main .container .main-title p {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+}
+
+.home-main .container .main-link ul {
+  margin: 0 auto;
+  width: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home-main .container .main-link ul li:nth-child(4) a {
+  width: 50px;
+  height: 45px;
+  position: relative;
+  left: 50%;
+}
+
+.home-main .container .main-link a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 30px;
+  height: 45px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+  text-decoration: none;
+}
+
+.home-main .container .main-link a i {
+  position: relative;
+  left: 7.5px;
+}
+
+.home-main .container .main-link a:hover {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.product-path {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-path .container {
+  margin: 0 auto;
+  width: 950px;
+}
+
+.product-path .container ul {
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 auto 40px;
+}
+
+.product-path .container a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 60px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+  text-align: center;
+  /*讓文字對齊*/
+  text-decoration: none;
+}
+
+.product-path .container a:hover {
+  /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+  color: #ce9700;
+  /* 這裡我們要讓選單可以觸發深橘色*/
+}
+
+.product-path .container p {
+  margin: 12px 0 0 0;
+}
+
+.product-introduction {
+  width: 950px;
+  height: 1000px;
+  margin: 0 160px 60px 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.product-introduction .product-image {
+  margin: 0 30px 0 0;
+  width: 500px;
+  height: 600px;
+}
+
+.product-introduction .product-image img {
+  width: 500px;
+  height: 600px;
+}
+
+.product-introduction .main-message {
+  margin: 0;
+  width: 500px;
+  height: 600px;
+}
+
+.product-introduction .main-message ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-introduction .main-message ul li:nth-child(2) {
+  margin: 0 0 30px 0;
+}
+
+.product-introduction .main-message ul li:nth-child(3) {
+  margin: 0 0 30px 0;
+  font-size: 20px;
+  color: #000;
+}
+
+.product-introduction .main-message ul li:nth-child(4) {
+  margin: 0 0 10px 0;
+}
+
+.product-introduction .main-message h2 {
+  margin: 0;
+  color: #000;
+}
+
+.product-introduction .main-message p {
+  margin: 0;
+}
+
+.product-introduction .button {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 0 60px 0;
+  border-bottom: #555 3px solid;
+}
+
+.product-introduction .button select {
+  display: block;
+  width: 420px;
+  height: 50px;
+  margin: 0 0 50px 0;
+}
+
+.product-introduction .button p {
+  margin: 0 0 10px 0;
+}
+
+.product-introduction .button input {
+  display: block;
+}
+
+.product-introduction .button input:nth-of-type(1) {
+  width: 90px;
+  height: 50px;
+  margin: 0 0 30px 0;
+}
+
+.product-introduction .button input:nth-of-type(2) {
+  width: 420px;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  border: #000 1px solid;
+}
+
+.product-introduction .new-items h3 {
+  margin: 50px 0;
+}
+
+.product-introduction .new-items li {
+  margin: 0 0 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.product-introduction .new-items li div {
+  margin: 0 0 0 20px;
+}
+
+.product-introduction .new-items li div p {
+  font-size: 16px;
+  color: #000;
+}
+
+.product-introduction .new-items li div h4 {
+  font-size: 16px;
+  color: #000;
+}
+
+.page-navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+  margin: 0 400px;
+}
+
+.home-subscription {
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  background: #f0f0f0;
+}
+
+.home-subscription h2 {
+  color: #000000;
+  font-size: 2rem;
+  text-align: center;
+  width: 400px;
+  margin: 0 400px 30px;
+}
+
+.home-subscription .email {
+  margin: 10px auto 0;
+  width: 539px;
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-subscription .email input:nth-of-type(1) {
+  margin: 0 auto;
+  height: 28px;
+  width: 500px;
+  border: #ddd 2px solid;
+  /*這裡將 選取器 邊框的底線改成實線*/
+  border-radius: 17px;
+  /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+  padding-left: 35px;
+  /*這裡將 search的內距向右調整*/
+}
+
+.home-subscription .email input:nth-of-type(2) {
+  margin: 10px auto 0;
+  padding: 0;
+  height: 28px;
+  width: 539px;
+  color: #fff;
+  background: #000000;
+  border: black 2px solid;
+  /*這裡將 選取器 邊框的底線改成實線*/
+  border-radius: 17px;
+  /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+}
+
+.home-subscription .email i {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+
+.home-subscription .email input:focus {
+  outline: none;
+  border-color: #099ced;
+  -webkit-box-shadow: #009ced 0 0 2px;
+          box-shadow: #009ced 0 0 2px;
+}
+
+.home-footer {
+  background: #000000;
+  margin: 40px auto 0;
+}
+
+.home-footer ul {
+  width: 300px;
+  margin: 0 auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home-footer a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 70px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: white;
+  text-align: center;
+  /*讓文字對齊*/
+  text-decoration: none;
+}
+
+.home-footer a:hover {
+  /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+  color: white;
+  /* 這裡我們要讓選單可以觸發深橘色*/
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.home-end {
+  background: #b8b8b8;
+}
+
+.home-end p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+
+/*-----------------------------------購物車---------------------------------------*/
+.home-header {
+  background: #070707;
+  height: 30px;
+}
+
+.home-header p {
+  height: 30px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  margin: 0;
+}
+
+.home-main .container {
+  height: 45px;
+  border-top: #ddd 1px solid;
+  /*設定頂部的 樣式*/
+  border-bottom: #ddd 1px solid;
+  /*設定底部的 樣式*/
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-main .container .main-menu ul {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home-main .container .main-menu a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 70px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+  text-align: center;
+  /*讓文字對齊*/
+  text-decoration: none;
+}
+
+.home-main .container .main-menu a:hover {
+  /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+  background: #16313d;
+  color: #fff;
+  /* 這裡我們要讓選單可以觸發深橘色*/
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background: #244f62;
+}
+
+.home-main .container .main-title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-main .container .main-title p {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+}
+
+.home-main .container .main-link ul {
+  margin: 0 auto;
+  width: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home-main .container .main-link ul li:nth-child(4) a {
+  width: 50px;
+  height: 45px;
+  position: relative;
+  left: 50%;
+}
+
+.home-main .container .main-link a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 30px;
+  height: 45px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+  text-decoration: none;
+}
+
+.home-main .container .main-link a i {
+  position: relative;
+  left: 7.5px;
+}
+
+.home-main .container .main-link a:hover {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.product-path {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.product-path ul {
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 40px 40px;
+}
+
+.product-path a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 80px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: #110f0f;
+  text-align: center;
+  /*讓文字對齊*/
+  text-decoration: none;
+}
+
+.product-path a:hover {
+  /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+  color: #ce9700;
+  /* 這裡我們要讓選單可以觸發深橘色*/
+}
+
+.product-path p {
+  margin: 12px 0 0 0;
+}
+
+.table {
+  width: 1000px;
+  margin: 0 100px;
+  border-bottom: #000 2px solid;
+}
+
+.table .thead-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  border-bottom: #000 2px solid;
+}
+
+.list-header {
+  margin: 20px 150px 0 150px;
+  border-bottom: #7e7e7e 2px solid;
+}
+
+.list-header ul {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000;
+}
+
+.list-header ul li {
+  width: 160px;
+  text-align: center;
+}
+
+.list-header ul li:nth-child(1) {
+  width: 500px;
+  text-align: left;
+}
+
+.list-header ul li:nth-last-child(1) {
+  text-align: right;
+}
+
+.list-header li {
+  font-size: 14px;
+}
+
+.list .list-middle {
+  margin: 0 150px;
+  width: 970px;
+  height: 250px;
+  border-bottom: #7e7e7e 2px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list .list-middle .list-image {
+  margin: 50px 0;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list .list-middle .list-image img {
+  width: 150px;
+}
+
+.list .list-middle .list-image .image-item {
+  margin: 0 20px;
+}
+
+.list .list-middle .list-image .image-item li:nth-last-child(1) {
+  margin: 30px 0;
+}
+
+.list .list-middle .list-image .image-item li:nth-last-child(1) a {
+  color: #000;
+}
+
+.list .list-middle .list-money {
+  width: 470px;
+}
+
+.list .list-middle .list-money ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list .list-middle .list-money li {
+  margin: 0;
+  width: 200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: 7%;
+}
+
+.list .list-middle .list-money li p {
+  margin: 110px 20px;
+  width: 70px;
+  text-align: right;
+}
+
+.list .list-middle .list-money li:nth-last-child(1) {
+  position: relative;
+  left: 13%;
+}
+
+.list .list-middle .list-money input {
+  margin: 110px 10px;
+  width: 100px;
+}
+
+.list-after {
+  margin: 0 150px;
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list-after form {
+  margin: 40px 0;
+  width: 500px;
+}
+
+.list-after .after-money {
+  width: 470px;
+  height: 150px;
+  margin: 20px 0;
+  border-bottom: #7e7e7e 2px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list-after .after-money ul {
+  margin: 0 0 0 52px;
+}
+
+.list-after .after-money ul p {
+  margin: 30px 0;
+}
+
+.list-after .after-money ul li:nth-of-type(2) p {
+  text-align: right;
+}
+
+.list-after .after-money ul:nth-last-child(1) {
+  width: 60px;
+  position: relative;
+  left: 50%;
+  text-align: right;
+}
+
+.list-after input {
+  height: 40px;
+  margin: 0 0 0 10px;
+}
+
+.list-last {
+  margin: 0 0 0 420px;
+  width: 500px;
+}
+
+.list-last .last-title ul {
+  margin: 0;
+  width: 415px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list-last li {
+  margin: 0 0 0 280px;
+  width: 100px;
+  font-size: 20px;
+  text-align: right;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list-last p {
+  width: 70px;
+  text-align: center;
+}
+
+.list-last form {
+  margin: 0 0 0 230px;
+}
+
+.list-last input {
+  background: #000;
+  color: #fff;
+  border: #000 2px solid;
+  border-radius: 30px;
+  width: 470px;
+  height: 50px;
+}
+
+.shopping-subscription {
+  margin: 70px 0 0 0;
+  padding: 40px 0 0 0;
+  background: #f0f0f0;
+}
+
+.shopping-subscription h2 {
+  color: #000000;
+  font-size: 2rem;
+  text-align: center;
+  width: 400px;
+  margin: 0 400px 30px;
+}
+
+.shopping-subscription .email {
+  margin: 0 350px 80px;
+  text-align: center;
+  position: relative;
+  right: 20px;
+}
+
+.shopping-subscription .email input:nth-of-type(1) {
+  width: 500px;
+  height: 28px;
+  border: #ddd 2px solid;
+  /*這裡將 選取器 邊框的底線改成實線*/
+  border-radius: 17px;
+  /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+  width: 500px;
+  padding-left: 35px;
+  /*這裡將 search的內距向右調整*/
+}
+
+.shopping-subscription .email input:nth-of-type(2) {
+  margin: 10px 0 0 0;
+  padding: 0;
+  width: 539px;
+  height: 28px;
+  color: #fff;
+  background: #000000;
+  border: black 2px solid;
+  /*這裡將 選取器 邊框的底線改成實線*/
+  border-radius: 17px;
+  /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
+}
+
+.shopping-subscription .email i {
+  position: relative;
+  right: 227px;
+  top: 28.5px;
+}
+
+.shopping-subscription .email input:focus {
+  outline: none;
+  border-color: #099ced;
+  -webkit-box-shadow: #009ced 0 0 2px;
+          box-shadow: #009ced 0 0 2px;
+}
+
+.shopping-footer {
+  background: #000000;
+  margin: 40px 0 0 0;
+}
+
+.shopping-footer ul {
+  width: 300px;
+  margin: 0 450px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.shopping-footer a {
+  display: block;
+  /*強迫 a區塊 呈現兩行*/
+  width: 70px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  /*設定框線的 行高*/
+  color: white;
+  text-align: center;
+  /*讓文字對齊*/
+  text-decoration: none;
+}
+
+.shopping-footer a:hover {
+  /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
+  color: white;
+  /* 這裡我們要讓選單可以觸發深橘色*/
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.shopping-end {
+  background: #b8b8b8;
+}
+
+.shopping-end p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 820px;
+  }
+  .home-image h2 {
+    margin: 0;
+    left: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home-directions p {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+  .home-subscription h2 {
+    margin: 0 auto;
+  }
+  .home-subscription h2 .email {
+    margin: 0 auto;
+  }
+  .home-subscription h2 .email input:nth-of-type(1) {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    width: 550px;
+  }
+  .home-image h2 {
+    display: none;
+  }
+  .home-main .container .main-menu a {
+    width: 60px;
+  }
+  .home-main .container .main-link ul {
+    width: 180px;
+  }
+  .home-main .container .main-link ul li:nth-child(4) {
+    position: relative;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    width: 350px;
+  }
+  .home-main .container .main-menu a {
+    width: 56px;
+  }
+  .home-main .container .main-title {
+    display: none;
+  }
+  .home-subscription .email {
+    width: 100%;
+  }
+  .home-subscription .email input:nth-of-type(1) {
+    width: 100%;
+  }
+  .home-subscription .email input:nth-of-type(2) {
+    width: 107%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
