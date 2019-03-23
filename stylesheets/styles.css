@@ -905,18 +905,17 @@ a:hover {
           animation-duration: 2s;
 }
 
-.product-path {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .product-path .container {
-  margin: 0 auto;
-  width: 950px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 20px auto;
 }
 
 .product-path .container ul {
   height: 45px;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -929,7 +928,6 @@ a:hover {
 .product-path .container a {
   display: block;
   /*強迫 a區塊 呈現兩行*/
-  width: 60px;
   height: 45px;
   font-size: 13px;
   line-height: 45px;
@@ -951,9 +949,9 @@ a:hover {
 }
 
 .product-introduction {
-  width: 950px;
-  height: 1000px;
-  margin: 0 160px 60px 160px;
+  width: 70%;
+  height: 1100px;
+  margin: 0 auto 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -965,18 +963,16 @@ a:hover {
 
 .product-introduction .product-image {
   margin: 0 30px 0 0;
-  width: 500px;
-  height: 600px;
+  width: 50%;
 }
 
 .product-introduction .product-image img {
-  width: 500px;
-  height: 600px;
+  max-width: 100%;
 }
 
 .product-introduction .main-message {
   margin: 0;
-  width: 500px;
+  width: 50%;
   height: 600px;
 }
 
@@ -1021,7 +1017,7 @@ a:hover {
 
 .product-introduction .button select {
   display: block;
-  width: 420px;
+  width: 80%;
   height: 50px;
   margin: 0 0 50px 0;
 }
@@ -1041,11 +1037,15 @@ a:hover {
 }
 
 .product-introduction .button input:nth-of-type(2) {
-  width: 420px;
+  width: 100%;
   height: 50px;
   background: #000;
   color: #fff;
   border: #000 1px solid;
+}
+
+.product-introduction .new-items {
+  margin: 0 auto 20px;
 }
 
 .product-introduction .new-items h3 {
@@ -1077,6 +1077,10 @@ a:hover {
   color: #000;
 }
 
+.page-navigation {
+  width: 100%;
+}
+
 .page-navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1085,11 +1089,10 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 400px;
-  margin: 0 400px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 45%;
+  margin: 0 auto 20px;
 }
 
 .home-subscription {
@@ -1352,7 +1355,6 @@ a:hover {
 .product-path a {
   display: block;
   /*強迫 a區塊 呈現兩行*/
-  width: 80px;
   height: 45px;
   font-size: 13px;
   line-height: 45px;
@@ -1715,7 +1717,7 @@ a:hover {
 
 @media screen and (max-width: 1200px) {
   .container {
-    width: 820px;
+    width: 860px;
   }
   .home-image h2 {
     margin: 0;
@@ -1762,6 +1764,35 @@ a:hover {
   .home-main .container .main-link ul li:nth-child(4) {
     position: relative;
     right: 20px;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .product-introduction {
+    height: 1500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product-introduction .product-image {
+    width: 100%;
+  }
+  .product-introduction .product-image .image-text {
+    width: 100%;
+    height: 150px;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .product-introduction .main-message {
+    width: 100%;
+  }
+  .product-introduction .main-message h2 {
+    margin: 20px 0 0;
   }
 }
 

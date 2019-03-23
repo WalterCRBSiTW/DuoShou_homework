@@ -100,14 +100,14 @@ a {
   border-bottom: #ddd 1px solid; /*設定底部的 樣式*/
   margin: 0 auto;
   display: flex;
-  justify-content:space-between; 
+  justify-content: space-between;
 
-  .main-menu { 
+  .main-menu {
     ul {
       @extend %nostyle-list;
       margin: 0 auto;
       display: flex;
-      justify-content: flex-start;    
+      justify-content: flex-start;
     }
 
     a {
@@ -140,8 +140,6 @@ a {
       line-height: 45px; /*設定框線的 行高*/
       color: rgb(17, 15, 15);
     }
-      
-    
   }
 
   .main-link {
@@ -186,7 +184,7 @@ a {
   height: 400px;
   // background: url(../__MACOSX/image.jpg) center no-repeat;
   background: url(/__MACOSX/image.jpg) center no-repeat;
-  background-size: cover; 
+  background-size: cover;
   position: relative;
 
   h2 {
@@ -279,7 +277,6 @@ a {
       border: #ddd 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
       border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
       padding-left: 35px; /*這裡將 search的內距向右調整*/
-      
     }
     input:nth-of-type(2) {
       margin: 10px auto 0;
@@ -296,7 +293,6 @@ a {
       position: absolute;
       top: 9px;
       left: 10px;
-
     }
 
     input:focus {
@@ -371,14 +367,14 @@ a {
   border-bottom: #ddd 1px solid; /*設定底部的 樣式*/
   margin: 0 auto;
   display: flex;
-  justify-content:space-between; 
+  justify-content: space-between;
 
-  .main-menu { 
+  .main-menu {
     ul {
       @extend %nostyle-list;
       margin: 0 auto;
       display: flex;
-      justify-content: flex-start;    
+      justify-content: flex-start;
     }
 
     a {
@@ -411,8 +407,6 @@ a {
       line-height: 45px; /*設定框線的 行高*/
       color: rgb(17, 15, 15);
     }
-      
-    
   }
 
   .main-link {
@@ -458,10 +452,10 @@ a {
   width: 100%;
   margin: 20px auto;
 
-
   ul {
     @extend %nostyle-list;
     height: 45px;
+    width: 70%;
     display: flex;
     justify-content: flex-start;
     margin: 0 auto 40px;
@@ -469,7 +463,6 @@ a {
 
   a {
     display: block; /*強迫 a區塊 呈現兩行*/
-    width: 40px;
     height: 45px;
     font-size: 13px;
     line-height: 45px; /*設定框線的 行高*/
@@ -487,30 +480,26 @@ a {
     margin: 12px 0 0 0;
   }
 }
-}
-
 
 .product-introduction {
-  width: 950px;
-  height: 1000px;
-  margin: 0 160px 60px 160px;
+  width: 70%;
+  height: 1100px;
+  margin: 0 auto 40px;
   display: flex;
   flex-direction: row;
 
   .product-image {
     margin: 0 30px 0 0;
-    width: 500px;
-    height: 600px;
+    width: 50%;
 
     img {
-      width: 500px;
-      height: 600px;
+      max-width: 100%;
     }
   }
 
   .main-message {
     margin: 0;
-    width: 500px;
+    width: 50%;
     height: 600px;
 
     ul {
@@ -547,7 +536,7 @@ a {
 
     select {
       display: block;
-      width: 420px;
+      width: 80%;
       height: 50px;
       margin: 0 0 50px 0;
     }
@@ -566,7 +555,7 @@ a {
     }
 
     input:nth-of-type(2) {
-      width: 420px;
+      width: 100%;
       height: 50px;
       background: #000;
       color: #fff;
@@ -575,6 +564,7 @@ a {
   }
 
   .new-items {
+    margin: 0 auto 20px;
     h3 {
       margin: 50px 0;
     }
@@ -602,13 +592,14 @@ a {
 }
 
 .page-navigation {
+  width: 100%;
   ul {
     @extend %nostyle-list;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 400px;
-    margin: 0 400px;
+    justify-content: space-around;
+    width: 45%;
+    margin: 0 auto 20px;
   }
 }
 
@@ -638,7 +629,6 @@ a {
       border: #ddd 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
       border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
       padding-left: 35px; /*這裡將 search的內距向右調整*/
-      
     }
     input:nth-of-type(2) {
       margin: 10px auto 0;
@@ -655,7 +645,6 @@ a {
       position: absolute;
       top: 9px;
       left: 10px;
-
     }
 
     input:focus {
@@ -731,14 +720,14 @@ a {
   border-bottom: #ddd 1px solid; /*設定底部的 樣式*/
   margin: 0 auto;
   display: flex;
-  justify-content:space-between; 
+  justify-content: space-between;
 
-  .main-menu { 
+  .main-menu {
     ul {
       @extend %nostyle-list;
       margin: 0 auto;
       display: flex;
-      justify-content: flex-start;    
+      justify-content: flex-start;
     }
 
     a {
@@ -771,8 +760,6 @@ a {
       line-height: 45px; /*設定框線的 行高*/
       color: rgb(17, 15, 15);
     }
-      
-    
   }
 
   .main-link {
@@ -827,7 +814,6 @@ a {
 
   a {
     display: block; /*強迫 a區塊 呈現兩行*/
-    width: 80px;
     height: 45px;
     font-size: 13px;
     line-height: 45px; /*設定框線的 行高*/
@@ -1134,7 +1120,7 @@ a {
 
 @media screen and (max-width: 1200px) {
   .container {
-    width: 820px;
+    width: 860px;
   }
 
   .home-image h2 {
@@ -1174,13 +1160,38 @@ a {
 
   .home-main .container {
     .main-menu a {
-    width: 60px;
-  }
+      width: 60px;
+    }
     .main-link ul {
       width: 180px;
       li:nth-child(4) {
         position: relative;
         right: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .product-introduction {
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+
+    .product-image {
+      width: 100%;
+      .image-text {
+        width: 100%;
+        height: 150px;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    }
+    .main-message {
+      width: 100%;
+      h2 {
+        margin: 20px 0 0;
       }
     }
   }
@@ -1196,9 +1207,8 @@ a {
       width: 56px;
     }
     .main-title {
-    display: none;
+      display: none;
     }
-  
   }
 
   .home-subscription {
@@ -1213,8 +1223,4 @@ a {
       }
     }
   }
-
-  
-  
 }
-
