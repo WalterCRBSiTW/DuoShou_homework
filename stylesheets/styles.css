@@ -432,7 +432,7 @@ template {
   }
 }
 
-.home-main .container .main-menu ul, .home-main .container .main-link ul, .home-menu ul, .home-menu a, .home-footer ul, .home-end p, .product-path .container ul, .product-introduction .main-message ul, .page-navigation ul, .product-path ul, .list-header ul, .list .list-middle .list-image ul, .list .list-middle .list-money ul, .list-after .after-money ul, .list-last .last-title ul, .shopping-footer ul, .shopping-end p {
+.home-main .container .main-menu ul, .home-main .container .main-link ul, .home-menu ul, .home-menu a, .home-footer ul, .home-end p, .product-path .container ul, .product-introduction .main-message ul, .page-navigation ul, .list-header ul, .list .list-middle .list-image ul, .list .list-middle .list-money ul, .list-after .after-money ul, .list-last .last-title ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -963,7 +963,6 @@ a:hover {
 
 .product-introduction .product-image {
   margin: 0 30px 0 0;
-  width: 50%;
 }
 
 .product-introduction .product-image img {
@@ -1340,22 +1339,10 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   margin: 20px auto;
 }
 
-.product-path ul {
-  height: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 40px 40px;
-}
-
 .product-path a {
-  display: block;
-  /*強迫 a區塊 呈現兩行*/
-  height: 45px;
   font-size: 13px;
   line-height: 45px;
   /*設定框線的 行高*/
@@ -1375,22 +1362,18 @@ a:hover {
   margin: 12px 0 0 0;
 }
 
-.table {
-  width: 1000px;
-  margin: 0 100px;
-  border-bottom: #000 2px solid;
+.list-container {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.table .thead-dark {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1000px;
-  border-bottom: #000 2px solid;
+.list-container .list {
+  width: 100%;
+  margin: 0 0 40px;
 }
 
 .list-header {
-  margin: 20px 150px 0 150px;
+  margin: 0;
   border-bottom: #7e7e7e 2px solid;
 }
 
@@ -1403,12 +1386,11 @@ a:hover {
 }
 
 .list-header ul li {
-  width: 160px;
-  text-align: center;
+  width: 17%;
 }
 
 .list-header ul li:nth-child(1) {
-  width: 500px;
+  width: 65%;
   text-align: left;
 }
 
@@ -1421,8 +1403,8 @@ a:hover {
 }
 
 .list .list-middle {
-  margin: 0 150px;
-  width: 970px;
+  margin: 0;
+  width: 100%;
   height: 250px;
   border-bottom: #7e7e7e 2px solid;
   display: -webkit-box;
@@ -1435,8 +1417,8 @@ a:hover {
 }
 
 .list .list-middle .list-image {
+  width: 55%;
   margin: 50px 0;
-  width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1463,7 +1445,8 @@ a:hover {
 }
 
 .list .list-middle .list-money {
-  width: 470px;
+  margin: 0 0  0 10px;
+  width: 45%;
 }
 
 .list .list-middle .list-money ul {
@@ -1478,33 +1461,28 @@ a:hover {
 
 .list .list-middle .list-money li {
   margin: 0;
-  width: 200px;
+  width: 33%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  left: 7%;
 }
 
 .list .list-middle .list-money li p {
-  margin: 110px 20px;
-  width: 70px;
+  margin: 110px 0;
+  text-align: left;
+}
+
+.list .list-middle .list-money li:nth-last-child(1) p {
   text-align: right;
 }
 
-.list .list-middle .list-money li:nth-last-child(1) {
-  position: relative;
-  left: 13%;
-}
-
 .list .list-middle .list-money input {
-  margin: 110px 10px;
-  width: 100px;
+  margin: 110px 0;
+  width: 80%;
 }
 
 .list-after {
-  margin: 0 150px;
-  width: 1000px;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1516,13 +1494,13 @@ a:hover {
 
 .list-after form {
   margin: 40px 0;
-  width: 500px;
+  width: 55%;
 }
 
 .list-after .after-money {
-  width: 470px;
+  width: 45%;
   height: 150px;
-  margin: 20px 0;
+  margin: 20px auto;
   border-bottom: #7e7e7e 2px solid;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1534,21 +1512,19 @@ a:hover {
 }
 
 .list-after .after-money ul {
-  margin: 0 0 0 52px;
+  margin: 0;
+  width: 50%;
 }
 
 .list-after .after-money ul p {
-  margin: 30px 0;
+  margin: 30px auto;
 }
 
 .list-after .after-money ul li:nth-of-type(2) p {
-  text-align: right;
+  margin: 0 0 0 30px;
 }
 
 .list-after .after-money ul:nth-last-child(1) {
-  width: 60px;
-  position: relative;
-  left: 50%;
   text-align: right;
 }
 
@@ -1558,13 +1534,13 @@ a:hover {
 }
 
 .list-last {
-  margin: 0 0 0 420px;
-  width: 500px;
+  margin: 0 0 0 55%;
+  width: 45%;
 }
 
 .list-last .last-title ul {
   margin: 0;
-  width: 415px;
+  width: 100%;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1576,8 +1552,8 @@ a:hover {
 }
 
 .list-last li {
-  margin: 0 0 0 280px;
-  width: 100px;
+  margin: 0;
+  width: 50%;
   font-size: 20px;
   text-align: right;
   -webkit-box-pack: justify;
@@ -1585,13 +1561,12 @@ a:hover {
           justify-content: space-between;
 }
 
-.list-last p {
-  width: 70px;
-  text-align: center;
+.list-last li:nth-child(1) {
+  text-align: left;
 }
 
 .list-last form {
-  margin: 0 0 0 230px;
+  width: 100%;
 }
 
 .list-last input {
@@ -1599,17 +1574,17 @@ a:hover {
   color: #fff;
   border: #000 2px solid;
   border-radius: 30px;
-  width: 470px;
+  width: 100%;
   height: 50px;
 }
 
-.shopping-subscription {
-  margin: 70px 0 0 0;
+.home-subscription {
+  margin: 0 auto;
   padding: 40px 0 0 0;
   background: #f0f0f0;
 }
 
-.shopping-subscription h2 {
+.home-subscription h2 {
   color: #000000;
   font-size: 2rem;
   text-align: center;
@@ -1617,30 +1592,37 @@ a:hover {
   margin: 0 400px 30px;
 }
 
-.shopping-subscription .email {
-  margin: 0 350px 80px;
+.home-subscription .email {
+  margin: 10px auto 0;
+  width: 539px;
   text-align: center;
   position: relative;
-  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.shopping-subscription .email input:nth-of-type(1) {
-  width: 500px;
+.home-subscription .email input:nth-of-type(1) {
+  margin: 0 auto;
   height: 28px;
+  width: 500px;
   border: #ddd 2px solid;
   /*這裡將 選取器 邊框的底線改成實線*/
   border-radius: 17px;
   /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
-  width: 500px;
   padding-left: 35px;
   /*這裡將 search的內距向右調整*/
 }
 
-.shopping-subscription .email input:nth-of-type(2) {
-  margin: 10px 0 0 0;
+.home-subscription .email input:nth-of-type(2) {
+  margin: 10px auto 0;
   padding: 0;
-  width: 539px;
   height: 28px;
+  width: 539px;
   color: #fff;
   background: #000000;
   border: black 2px solid;
@@ -1649,27 +1631,27 @@ a:hover {
   /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
 }
 
-.shopping-subscription .email i {
-  position: relative;
-  right: 227px;
-  top: 28.5px;
+.home-subscription .email i {
+  position: absolute;
+  top: 9px;
+  left: 10px;
 }
 
-.shopping-subscription .email input:focus {
+.home-subscription .email input:focus {
   outline: none;
   border-color: #099ced;
   -webkit-box-shadow: #009ced 0 0 2px;
           box-shadow: #009ced 0 0 2px;
 }
 
-.shopping-footer {
+.home-footer {
   background: #000000;
-  margin: 40px 0 0 0;
+  margin: 40px auto 0;
 }
 
-.shopping-footer ul {
+.home-footer ul {
   width: 300px;
-  margin: 0 450px 0;
+  margin: 0 auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1677,7 +1659,7 @@ a:hover {
       justify-content: space-around;
 }
 
-.shopping-footer a {
+.home-footer a {
   display: block;
   /*強迫 a區塊 呈現兩行*/
   width: 70px;
@@ -1691,7 +1673,7 @@ a:hover {
   text-decoration: none;
 }
 
-.shopping-footer a:hover {
+.home-footer a:hover {
   /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
   color: white;
   /* 這裡我們要讓選單可以觸發深橘色*/
@@ -1703,11 +1685,11 @@ a:hover {
           animation-duration: 2s;
 }
 
-.shopping-end {
+.home-end {
   background: #b8b8b8;
 }
 
-.shopping-end p {
+.home-end p {
   height: 40px;
   line-height: 40px;
   font-size: 12px;
@@ -1717,7 +1699,8 @@ a:hover {
 
 @media screen and (max-width: 1200px) {
   .container {
-    width: 860px;
+    width: 80%;
+    margin: 0 auto;
   }
   .home-image h2 {
     margin: 0;
@@ -1748,9 +1731,9 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 890px) {
   .container {
-    width: 550px;
+    margin: 0 auto;
   }
   .home-image h2 {
     display: none;
@@ -1769,7 +1752,7 @@ a:hover {
 
 @media screen and (max-width: 815px) {
   .product-introduction {
-    height: 1500px;
+    height: 1600px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1798,7 +1781,7 @@ a:hover {
 
 @media screen and (max-width: 580px) {
   .container {
-    width: 350px;
+    width: 400px;
   }
   .home-main .container .main-menu a {
     width: 56px;

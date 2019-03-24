@@ -469,7 +469,7 @@ a {
     color: rgb(17, 15, 15);
     text-align: center; /*讓文字對齊*/
     text-decoration: none;
-  }
+  } 
 
   a:hover {
     /*雖然前面已經有 a:hover 但是這裡的權重比較大 所以會執行這一段的 a:hover*/
@@ -490,7 +490,6 @@ a {
 
   .product-image {
     margin: 0 30px 0 0;
-    width: 50%;
 
     img {
       max-width: 100%;
@@ -802,19 +801,9 @@ a {
 
 .product-path {
   justify-content: center;
-  width: 100%;
   margin: 20px auto;
 
-  ul {
-    @extend %nostyle-list;
-    height: 45px;
-    display: flex;
-    margin: 0 0 40px 40px;
-  }
-
   a {
-    display: block; /*強迫 a區塊 呈現兩行*/
-    height: 45px;
     font-size: 13px;
     line-height: 45px; /*設定框線的 行高*/
     color: rgb(17, 15, 15);
@@ -832,20 +821,18 @@ a {
   }
 }
 
-.table {
-  width: 1000px;
-  margin: 0 100px;
-  border-bottom: #000 2px solid;
-
-  .thead-dark {
-    display: flex;
-    width: 1000px;
-    border-bottom: #000 2px solid;
+.list-container {
+  width: 80%;
+  margin: 0 auto;
+  
+  .list {
+    width: 100%;
+    margin: 0 0 40px;
   }
 }
 
 .list-header {
-  margin: 20px 150px 0 150px;
+  margin: 0;
   border-bottom: rgb(126, 126, 126) 2px solid;
 
   ul {
@@ -855,11 +842,10 @@ a {
     color: #000;
 
     li {
-      width: 160px;
-      text-align: center;
+      width: 17%;
 
       &:nth-child(1) {
-        width: 500px;
+        width: 65%;
         text-align: left;
       }
 
@@ -875,16 +861,16 @@ a {
 }
 
 .list .list-middle {
-  margin: 0 150px;
-  width: 970px;
+  margin: 0;
+  width: 100%;
   height: 250px;
   border-bottom: rgb(126, 126, 126) 2px solid;
   display: flex;
   flex-direction: row;
 
   .list-image {
+    width: 55%;
     margin: 50px 0;
-    width: 500px;
     display: flex;
     flex-direction: row;
     ul {
@@ -909,7 +895,8 @@ a {
     }
   }
   .list-money {
-    width: 470px;
+    margin: 0 0  0 10px;
+    width: 45%;
     ul {
       @extend %nostyle-list;
       display: flex;
@@ -917,66 +904,59 @@ a {
     }
     li {
       margin: 0;
-      width: 200px;
+      width: 33%;
       justify-content: center;
-      position: relative;
-      left: 7%;
 
       p {
-        margin: 110px 20px;
-        width: 70px;
-        text-align: right;
+        margin: 110px 0;
+        text-align: left
       }
     }
-    li:nth-last-child(1) {
-      position: relative;
-      left: 13%;
+    li:nth-last-child(1) p {
+      text-align: right;
     }
     input {
-      margin: 110px 10px;
-      width: 100px;
+      margin: 110px 0;
+      width:  80%;
     }
   }
 }
 
 .list-after {
-  margin: 0 150px;
-  width: 1000px;
+  margin: 0;
   display: flex;
   flex-direction: row;
 
   form {
     margin: 40px 0;
-    width: 500px;
+    width: 55%;
   }
 
   .after-money {
-    width: 470px;
+    width: 45%;
     height: 150px;
-    margin: 20px 0;
+    margin: 20px auto;
     border-bottom: rgb(126, 126, 126) 2px solid;
     display: flex;
     flex-direction: row;
 
     ul {
-      margin: 0 0 0 52px;
+      margin: 0;
+      width: 50%;
       @extend %nostyle-list;
 
       p {
-        margin: 30px 0;
+        margin: 30px auto;
       }
 
       li:nth-of-type(2) {
         p {
-          text-align: right;
+          margin: 0 0 0 30px;
         }
       }
     }
 
     ul:nth-last-child(1) {
-      width: 60px;
-      position: relative;
-      left: 50%;
       text-align: right;
     }
   }
@@ -986,45 +966,46 @@ a {
     margin: 0 0 0 10px;
   }
 }
+
 .list-last {
-  margin: 0 0 0 420px;
-  width: 500px;
+  margin: 0 0 0 55%;
+  width: 45%;
 
   .last-title ul {
     @extend %nostyle-list;
     margin: 0;
-    width: 415px;
+    width: 100%;
     height: 80px;
     display: flex;
     flex-direction: row;
   }
   li {
-    margin: 0 0 0 280px;
-    width: 100px;
+    margin: 0;
+    width: 50%;
     font-size: 20px;
     text-align: right;
     justify-content: space-between;
-  }
 
-  p {
-    width: 70px;
-    text-align: center;
+    &:nth-child(1) {
+      text-align: left;
+    }
   }
 
   form {
-    margin: 0 0 0 230px;
+    width: 100%;
   }
   input {
     background: #000;
     color: #fff;
     border: #000 2px solid;
     border-radius: 30px;
-    width: 470px;
+    width: 100%;
     height: 50px;
   }
 }
-.shopping-subscription {
-  margin: 70px 0 0 0;
+
+.home-subscription {
+  margin: 0 auto;
   padding: 40px 0 0 0;
   background: rgb(240, 240, 240);
   h2 {
@@ -1036,23 +1017,25 @@ a {
   }
 
   .email {
-    margin: 0 350px 80px;
+    margin: 10px auto 0;
+    width: 539px;
     text-align: center;
     position: relative;
-    right: 20px;
+    display: flex;
+    flex-direction: column;
     input:nth-of-type(1) {
-      width: 500px;
+      margin: 0 auto;
       height: 28px;
+      width: 500px;
       border: #ddd 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
       border-radius: 17px; /*這裡將 選取器 邊框變成圓潤的 (總高度/2) */
-      width: 500px;
       padding-left: 35px; /*這裡將 search的內距向右調整*/
     }
     input:nth-of-type(2) {
-      margin: 10px 0 0 0;
+      margin: 10px auto 0;
       padding: 0;
-      width: 539px;
       height: 28px;
+      width: 539px;
       color: #fff;
       background: #000000;
       border: rgb(0, 0, 0) 2px solid; /*這裡將 選取器 邊框的底線改成實線*/
@@ -1060,9 +1043,9 @@ a {
     }
 
     i {
-      position: relative;
-      right: 227px;
-      top: 28.5px;
+      position: absolute;
+      top: 9px;
+      left: 10px;
     }
 
     input:focus {
@@ -1072,14 +1055,15 @@ a {
     }
   }
 }
+
 //頁腳
-.shopping-footer {
+.home-footer {
   background: #000000;
-  margin: 40px 0 0 0;
+  margin: 40px auto 0;
   ul {
     @extend %nostyle-list;
     width: 300px;
-    margin: 0 450px 0;
+    margin: 0 auto 0;
     display: flex;
     justify-content: space-around;
   }
@@ -1103,7 +1087,8 @@ a {
     animation-duration: 2s;
   }
 }
-.shopping-end {
+
+.home-end {
   background: rgb(184, 184, 184);
 
   p {
@@ -1120,7 +1105,8 @@ a {
 
 @media screen and (max-width: 1200px) {
   .container {
-    width: 860px;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .home-image h2 {
@@ -1149,9 +1135,9 @@ a {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 890px) {
   .container {
-    width: 550px;
+    margin: 0 auto;
   }
 
   .home-image h2 {
@@ -1174,7 +1160,7 @@ a {
 
 @media screen and (max-width: 815px) {
   .product-introduction {
-    height: 1500px;
+    height: 1600px;
     display: flex;
     flex-direction: column;
 
@@ -1199,7 +1185,7 @@ a {
 
 @media screen and (max-width: 580px) {
   .container {
-    width: 350px;
+    width: 400px;
   }
 
   .home-main .container {
